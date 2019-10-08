@@ -1,15 +1,22 @@
+'''
+Author: Trevor Rice
+Class: CSC 499
+Assignment: Homework1
+Github: https://github.com/TrevorRice39/csc-499/blob/master/Homework1
+'''
 import read
-import os
+import sort as sort_names
+
 def main():
-    file_path = os.getcwd()
-    file_path = file_path[0 : file_path.rfind('/')] + '/ExamResources/Sort Me.txt'
-    read.read_file(file_path)
+    # reading in the file path
+    print('Enter a file to be sorted: ', end='')
+    new_path = input()
 
-    pass
+    # reading the file and parsing the names
+    name_list = read.read_file(new_path)
 
-
-
-
+    # print the sorted list
+    print('Sorted file:\n', sort_names.sort(name_list))
 
 if __name__ == '__main__':
     main()
