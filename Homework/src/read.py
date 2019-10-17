@@ -12,7 +12,7 @@ def read_file(file_path):
             for name in name_list:
                 # if name has at least one character, add it
                 if len(name.strip()) > 0:
-                    # strip the whitespaces and apepnd it to our list
+                    # strip the whitespaces and append it to our list
                     parsed_names.append(name.strip())
             return parsed_names
 
