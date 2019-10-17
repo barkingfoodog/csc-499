@@ -1,7 +1,6 @@
 import sys
 # returns the file read from the file_path, if valid
 def read_file(file_path):
-    
     # attempt to read the file_path into a file
     try:
         # open our file and store it into name list
