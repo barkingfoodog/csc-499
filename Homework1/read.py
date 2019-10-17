@@ -1,7 +1,6 @@
 import sys
 # returns the file read from the file_path, if valid
 def read_file(file_path):
-
     # attempt to read the file_path into a file
     try:
         # open our file and store it into name list
@@ -13,6 +12,7 @@ def read_file(file_path):
             for name in name_list:
                 # if name has at least one character, add it
                 if len(name.strip()) > 0:
+                    # strip the whitespaces and apepnd it to our list
                     parsed_names.append(name.strip())
             return parsed_names
 

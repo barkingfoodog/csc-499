@@ -3,7 +3,7 @@ def sort(list):
         return None
 
     # partition list into groups by length
-    grouped = group_by_len(list)
+    grouped = partition(list)
 
     # sort each group alphabetically
     for list in grouped:
@@ -13,10 +13,9 @@ def sort(list):
     sorted_len_alpha = []
     for list in grouped:
         sorted_len_alpha = sorted_len_alpha + list
-
     return sorted_len_alpha
 
-def group_by_len(list):
+def partition(list):
     # mapping length to list of strings
     len_map = dict()
 
@@ -29,10 +28,11 @@ def group_by_len(list):
         if length not in len_map:
             len_map[length] = []
         
-        # append the word in the correct list identified by the length of the word
-        ## for example, if the word was 'aaa', it would be appeneded to the list 
-        ## in our map identified by the key '3'
-        len_map[length].append(word)
+        '''append the word in the correct list identified by the length of the word
+           for example, if the word was 'aaa', it would be appeneded to the list 
+           in our map identified by the key '3'
+           len_map[length].append(word)
+        '''
     
     # unpack the keys into a list and sort
     len_keys = [*len_map]
