@@ -13,7 +13,6 @@ def sort(list):
     sorted_len_alpha = []
     for list in grouped:
         sorted_len_alpha = sorted_len_alpha + list
-
     return sorted_len_alpha
 
 def group_by_len(list):
