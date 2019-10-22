@@ -31,8 +31,8 @@ def partition(list):
         '''append the word in the correct list identified by the length of the word
            for example, if the word was 'aaa', it would be appeneded to the list 
            in our map identified by the key '3'
-           len_map[length].append(word)
         '''
+        len_map[length].append(word)
     
     # unpack the keys into a list and sort
     len_keys = [*len_map]
