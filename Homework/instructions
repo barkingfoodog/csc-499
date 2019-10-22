@@ -1,0 +1,11 @@
+To run this program, unpack the Homework1 folder somewhere onto your computer.
+
+You must have installed python 3.7.x or later 
+
+If you are on Linux or Mac, open a terminal and run the following
+    python3 .../Homework1/main.py
+
+If you are on Windows, you will need to use the Python interpreter to run the program.
+    Open cmd prompt and type the following:
+	/path/to/python/interpreter/python3.exe .../Homework1/main.py
+
