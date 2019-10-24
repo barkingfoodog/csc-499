@@ -3,7 +3,7 @@ def sort(list):
         return None
 
     # partition list into groups by length
-    grouped = partition(list)
+    grouped = partition_by_len(list)
 
     # sort each group alphabetically
     for list in grouped:
@@ -15,7 +15,7 @@ def sort(list):
         sorted_len_alpha = sorted_len_alpha + list
     return sorted_len_alpha
 
-def partition(list):
+def partition_by_len(list):
     # mapping length to list of strings
     len_map = dict()
 

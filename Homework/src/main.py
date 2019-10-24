@@ -8,7 +8,7 @@ Github: https://github.com/TrevorRice39/csc-499/blob/master/Homework1
 '''
 import sys, getopt
 import os
-import read
+import file
 import sort as sort_names
 
 def main(argv):
@@ -22,15 +22,14 @@ def main(argv):
     output_path = argv[1]
     
     # reading the file and parsing the names
-    name_list = read.read_file(input_path)
+    name_list = file.read(input_path)
 
     # sorting the names
     sorted_name_list = sort_names.sort(name_list)
 
-    # writing the list of sorted names to the output file
-    with open(output_path, 'w') as output_file:
-        for name in sorted_name_list:
-            output_file.write('%s\n' % name)
+    # write the sorted names to the output file
+    file.write(output_path, sorted_name_list)
+    
 
 if __name__ == '__main__':
     main(sys.argv[1:])
