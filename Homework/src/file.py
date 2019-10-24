@@ -1,6 +1,7 @@
 import sys
+
 # returns the file read from the file_path, if valid
-def read_file(file_path):
+def read(file_path):
     # attempt to read the file_path into a file
     try:
         # open our file and store it into name list
@@ -17,6 +18,20 @@ def read_file(file_path):
             return parsed_names
 
     # could not read the file successfully
+    except Exception as e:
+        # print the error
+        print(e)
+        
+        # quit the program
+        sys.exit(0)
+
+# writes 'data' to the file_path file
+def write(file_path, data):
+    try:
+        # writing the list of sorted names to the output file
+        with open(file_path, 'w') as output_file:
+            for line in data:
+                output_file.write('%s\n' % line)
     except Exception as e:
         # print the error
         print(e)
