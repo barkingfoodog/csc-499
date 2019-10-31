@@ -21,11 +21,17 @@ def main(argv):
     # second arg is output path
     output_path = argv[1]
     
+    direction = 'asc'
+    # if they specified ascending or descending
+    if len(argv) == 3:
+        if argv[2] == 'desc':
+            direction = 'desc'
+
     # reading the file and parsing the names
     name_list = file.read(input_path)
 
     # sorting the names
-    sorted_name_list = sort_names.sort(name_list)
+    sorted_name_list = sort_names.sort_by_len_alpha(name_list, direction)
 
     # write the sorted names to the output file
     file.write(output_path, sorted_name_list)
