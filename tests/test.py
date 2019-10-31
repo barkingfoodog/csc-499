@@ -90,13 +90,19 @@ class Tests(unittest.TestCase):
 
 
     '''
-        testing the sort_alpha method
+        testing the sort_by_alpha method
     '''
     def test_sort(self):
-        self.assertTrue(True)
+        input_dict = [['c', 'a'], ['bb', 'aa'], ['bbb', 'aaa'], ['cccc']]
+        output_list = [['a', 'c'], ['aa', 'bb'], ['aaa', 'bbb'], ['cccc']]
+        self.assertEqual(sort.sort_by_alpha(input_dict), output_list)
+
+        input_list = [['aaa'], ['aa'], ['a']]
+        output_list = [['aaa'], ['aa'], ['a']]
+        self.assertEqual(sort.sort_by_alpha(input_list), output_list)
 
     '''
-        testing the final sort method in sort.py
+        testing the sort_by_len_alpha method in sort.py
 
         this method calls the partition_by_len method on the list
         and then sorts the output alphabetically

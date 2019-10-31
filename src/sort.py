@@ -1,13 +1,13 @@
-def sort_by_alpha(list_dict):
-    if list_dict is None:
+def sort_by_alpha(list_of_grouped_lists):
+    if list_of_grouped_lists is None:
         return None
 
     # sort each group alphabetically
-    for list in list_dict:
+    for list in list_of_grouped_lists:
         list.sort()
 
     # return the partitions sorted alphabetically
-    return list_dict
+    return list_of_grouped_lists
     
 
 def partition_by_len(list, direction):
