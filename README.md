@@ -1,3 +1,4 @@
+https://travis-ci.org/TrevorRice39/csc-499.svg?branch=master
 # Sorting Application
 
 ## Running the application
